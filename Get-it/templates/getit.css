@@ -1,0 +1,267 @@
+/*
+Algumas informações úteis e dicas:
+  - Fontes disponíveis:
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+  - Cores:
+    Tons de amarelo:
+      #e4fc2b
+      #e0d426
+      #f7d736
+      #e0af26
+      #fcb02b
+    Tons de cinza:
+      #2c2c2c
+      #4c4c4c
+    Cores dos cards:
+      #ead3a7
+      #9de0f5
+      #ef89ba
+      #fae890
+      #abe9c1
+  - Sombra: https://codepen.io/sdthornton/pen/wBZdXq
+ */
+
+ html,
+ body {
+   font-family: "Roboto", sans-serif;
+ }
+ 
+ body {
+   margin: 0;
+   padding: 0;
+   height: 100vh;             /* Toma toda a altura da tela */
+   display: flex;             
+   flex-direction: column;    /* Os filhos de body (como .appbar e .form-card) são organizados em coluna */
+   align-items: center;       /* Centraliza os filhos no eixo horizontal */
+    /* Centraliza os filhos no eixo vertical */
+ }
+ 
+ .container{
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .appbar {
+   width: 100%;
+   background-color: #f7d736;
+   display: flex;
+   align-items: center;
+   padding: 0.625rem 0.9375rem; /* 10px 15px convertidos em rem */
+   height: 3.125rem; /* 50px convertido em rem */
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+ }
+ 
+ 
+ .appbar .logo {
+   margin-left: 1.25rem;
+   margin-right: 1.25rem; /* 20px convertido em rem */
+   height: 3rem; /* Definindo a altura */
+   width: auto; /* Mantendo a proporção da imagem */
+ }
+ 
+ .appbar .subtitle {
+     flex: 1;
+     text-align: left;
+     color: #2c2c2c;
+ }
+ 
+ .form-card {
+   margin-top: 1.6rem;          /* Adiciona um espaço entre o .appbar e o .form-card */
+   margin-bottom: 2rem; 
+   height: 7rem; /* Definindo a altura */
+   width: 65rem; /* Mantendo a proporção da imagem */
+   max-width: 500px;          /* Opcional: define uma largura máxima */
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;   /* Alinha os filhos à esquerda */
+   padding: 1rem;         /* Espaço interno para dar algum espaço entre o contorno e os elementos internos */
+   border-radius: 0.3rem;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+ }
+ 
+ .form-card .form-card-title{
+   color: #4c4c4c;
+   font-size: 1.2rem;
+   width: 100%;               /* Garante que os campos ocupem toda a largura */
+   margin-top: 0.25rem;         /* Espaçamento topo*/
+   margin-bottom: 0.6rem;         /* Espaçamento inferior*/
+   text-align: left;
+   border: none;        /* Remove o contorno da área de texto */
+   outline: none;
+ }
+ 
+ .form-card .autoresize {
+   color: #4c4c4c;
+   width: 100%;               /* Garante que os campos ocupem toda a largura */
+           /* Espaçamento entre os campos */
+   text-align: left;
+   border: none;        /* Remove o contorno da área de texto */
+   outline: none;
+   resize: none;
+   font-family: "Roboto", sans-serif;
+ }
+ 
+ .form-card .btn {
+   font-weight: bold;
+   background-color: #f7d736;
+   color: #2c2c2c;
+   width: 100%;               /* Garante que os campos ocupem toda a largura */
+   height: 2.8rem;
+   margin-top: 0.5rem;
+   margin-bottom: 0.05rem;         /* Espaçamento entre os campos */
+   box-sizing: border-box;
+   text-align: center;
+   border-radius: 0.3rem;
+   border: none;        /* Remove o contorno da área de texto */
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ }
+ 
+ .card-container{
+     font-family: 'Permanent Marker', cursive;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .card{
+     margin: 1.5rem;
+     width: 13rem;               /* Garante que os campos ocupem toda a largura */
+     height: 6rem;
+     border-radius: 0.5rem;
+     padding: 1rem;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 3px 2px rgba(0,0,0,0.24);
+ }
+
+ 
+ 
+ .card-title{
+     font-size: 1.2rem;
+     color: #2c2c2c;
+     text-align: left;
+ }
+ 
+ .card-content {
+  font-size: 1rem;
+  margin: 1rem;
+  margin-top: 2rem;  /* adiciona espaço extra no topo para o conteúdo */
+  color: #4c4c4c;
+  text-align: center;
+  justify-content: center;
+}
+
+
+ .delete-btn {
+  position: absolute;  /* isso tira o botão do fluxo normal do documento */
+  top: 10px;           /* posiciona o botão perto do topo do card */
+  right: 10px;         /* posiciona o botão perto do lado direito do card */
+  background-color: transparent;  /* Sem cor de fundo inicialmente */
+  color: #2c2c2c;      /* Cor do texto "X" */
+  border: none;
+  border-radius: 50%;  /* isso fará o botão parecer um círculo */
+  width: 20px;         /* largura fixa */
+  height: 20px;        /* altura fixa */
+  text-align: center;  
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;  /* transição suave ao mudar a cor de fundo */
+}
+
+.delete-btn:hover {
+  background-color: #e04f5f;  /* Cor de fundo vermelho ao passar o mouse */
+}
+
+.edit-btn {
+  position: absolute;  /* isso tira o botão do fluxo normal do documento */
+  top: 6.9rem;           /* posiciona o botão perto do topo do card */
+  right: 0.5rem;         /* posiciona o botão perto do lado direito do card */
+  font-size: 0.7rem;
+  background-color: transparent;  /* Sem cor de fundo inicialmente */
+  color: #2c2c2c;      /* Cor do texto "X" */
+  border: none;
+  font-family: "Lucida Console", monospace;
+  border-radius: 0.2rem;
+  width: 2rem;         /* largura fixa */
+  height: 1rem;        /* altura fixa */
+  text-align: center;  
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none 
+}
+
+.edit-btn:hover {
+  background-color: #F0FFFF;
+  font-weight: bold;
+  /* Cor de fundo vermelho ao passar o mouse */
+}
+ 
+ .card-color-1 {
+     background-color: #ead3a7; /* vermelho */
+ }
+ 
+ .card-color-2 {
+     background-color: #9de0f5; /* amarelo */
+ }
+ 
+ .card-color-3 {
+     background-color: #ef89ba; /* verde */
+ }
+ 
+ .card-color-4 {
+     background-color: #fae890; /* azul */
+ }
+ 
+ .card-color-5 {
+     background-color: #abe9c1; /* roxo */
+ }
+ 
+ .card-rotation-1 {
+     transform: rotate(-3deg);
+ }
+ 
+ .card-rotation-2 {
+     transform: rotate(-4deg);
+ }
+ 
+ .card-rotation-3 {
+     transform: rotate(4deg);
+ }
+ 
+ .card-rotation-4 {
+     transform: rotate(3deg);
+ }
+ 
+ .card-rotation-5 {
+     transform: rotate(-4deg);
+ }
+ 
+ .card-rotation-6 {
+     transform: rotate(-3deg);
+ }
+ 
+ .card-rotation-7 {
+     transform: rotate(-5deg);
+ }
+ 
+ .card-rotation-8 {
+     transform: rotate(4deg);
+ }
+ 
+ .card-rotation-9 {
+     transform: rotate(-4deg);
+ }
+ 
+ .card-rotation-10 {
+     transform: rotate(4deg);
+ }
+ 
+ .card-rotation-11 {
+     transform: rotate(5deg);
+ }
+ 
+ 

@@ -1,0 +1,146 @@
+html,
+ body {
+   font-family: "Roboto", sans-serif;
+ }
+ 
+ body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;             
+  display: flex;             
+  flex-direction: column;    
+  align-items: center;       
+}
+
+
+.appbar {
+    width: 100%;
+    background-color: #f7d736;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 0.9375rem; /* 10px 15px convertidos em rem */
+    height: 3.125rem; /* 50px convertido em rem */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  
+.appbar .logo {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem; /* 20px convertido em rem */
+    height: 3rem; /* Definindo a altura */
+    width: auto; /* Mantendo a proporção da imagem */
+    cursor: pointer; 
+  }
+  
+.appbar .subtitle {
+      flex: 1;
+      text-align: left;
+      color: #2c2c2c;
+  }
+
+.form-card-container {
+    flex: 1;                   
+    display: flex;
+    align-items: center;       
+    justify-content: center;  
+    width: 100%;
+    transform: translateY(-15%);  /* Move o conteúdo para cima em relação à sua posição central */
+}
+
+.form-card {
+    margin-top: 1.6rem;          /* Adiciona um espaço entre o .appbar e o .form-card */
+    margin-bottom: 2rem; 
+    height: 15rem; /* Definindo a altura */
+    width: 65rem; /* Mantendo a proporção da imagem */
+    max-width: 500px;          /* Opcional: define uma largura máxima */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* Alinha os filhos à esquerda */
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;         /* Espaço interno para dar algum espaço entre o contorno e os elementos internos */
+    border-radius: 0.3rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+.form-card .form-card-title{
+    color: #4c4c4c;
+    font-size: 1.7rem;
+    width: 100%;               /* Garante que os campos ocupem toda a largura */
+    margin-top: 0.25rem;         /* Espaçamento topo*/
+    margin-bottom: 0.6rem;         /* Espaçamento inferior*/
+    text-align: left;
+    border: none;        /* Remove o contorno da área de texto */
+    outline: none;
+    margin-left: 1rem;
+  }
+  
+.form-card .autoresize {
+    color: #4c4c4c;
+    width: 100%;
+    font-size: 1.1rem;          /* Garante que os campos ocupem toda a largura */
+    text-align: left;
+    border: none;        /* Remove o contorno da área de texto */
+    outline: none;
+    resize: none;
+    font-family: "Roboto", sans-serif;
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+.form-card .btn{
+  display: flex;
+  justify-content: space-between;  /* Isso fará com que o espaço entre os botões seja maximizado */
+  width: 100%;                      /* Ocupa toda a largura disponível */
+  padding: 0rem;
+  margin-top: auto;
+  margin-bottom: 1rem;
+   
+}
+
+.form-card .savebtn {
+    font-size: 1rem;
+    color: #2c2c2c;
+    font-weight: bold;
+    background-color: #f7d736;
+    color: #2c2c2c;
+    width: 10rem;               /* Garante que os campos ocupem toda a largura */
+    height: 2.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.05rem;
+    margin-right: 1.5rem;         /* Espaçamento entre os campos */
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 0.3rem;
+    border: none;        /* Remove o contorno da área de texto */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-card .cancelbtn {
+    font-size: 1rem;
+    color: #2c2c2c;
+    font-weight: bold;
+    background-color: #e04f5f;
+    color: #2c2c2c;
+    width: 10rem;               /* Garante que os campos ocupem toda a largura */
+    height: 2.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.05rem;
+    margin-left: 1.5rem;         /* Espaçamento entre os campos */
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 0.3rem;
+    border: none;        /* Remove o contorno da área de texto */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-decoration: none;
+    margin-right: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }

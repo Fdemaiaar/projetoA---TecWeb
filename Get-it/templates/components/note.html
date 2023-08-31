@@ -1,0 +1,19 @@
+
+<div class="card">
+    <h3 class="card-title">{title}</h3>
+
+    <form method="post" class="delete-form">
+      <input type="hidden" name="id" value="{identificador}">
+      <button class="delete-btn" type="submit">X</button>
+    </form>
+
+    <div class="card-content">
+      <p>
+        {details}
+      </p>
+    </div>
+
+    <!-- Link para edição -->
+    <a href="/edit/id={identificador}" class="edit-btn">edit</a>
+
+</div>

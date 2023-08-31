@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Edit-Note</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+          integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+          crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto&family=Permanent+Marker&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/templates/editnote.css" />
+    </head>
+
+    <body>
+        <div class="appbar">
+            <a href="/">
+                <img src="/img/logo-getit.png" class="logo" alt="Logo Getit - Voltar para página principal" />
+            </a>
+            <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+        </div>
+        
+
+        <div class="form-card-container">
+            <form action="/edit/id={identificador}/update" method="post" class = "form-card">
+                <input type="hidden" name="id" value="{identificador}">
+                <div>
+                    <input
+                    class = "form-card-title" 
+                    type="text" 
+                    id="titulo" 
+                    name="titulo" 
+                    value="{title}"
+                    />
+                </div>
+                <div>
+                    <textarea 
+                    class="autoresize"
+                    name="detalhes"
+                    placeholder="Digite o conteúdo..."
+                    ></textarea>
+                </div>
+                <div class = "btn">
+                    <a href="/" class = "cancelbtn">Cancelar</a>
+                    <button type="submit" class = "savebtn">Salvar</button>  
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>
